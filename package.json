@@ -1,7 +1,7 @@
 {
   "name": "hubot-pagerduty-github",
   "description": "PagerDuty Integration for checking who's on call, making exceptions, ack, resolve, etc.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Patrick Connolly <patrick.c.connolly@gmail.com>",
   "license": "MIT",
   "keywords": [
