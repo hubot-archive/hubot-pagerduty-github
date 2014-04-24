@@ -436,15 +436,12 @@ module.exports = (robot) ->
       Incident # #{incident.incident_number} :
       #{incident.status} and assigned to #{getUserForIncident(incident)}
        #{incident.html_url}
-      To acknowledge: @#{robot.name} pager me ack #{incident.incident_number}
-       To resolve: @#{robot.name} pager me resolve #{incident.incident_number}
       """
     else if hookType == "incident.acknowledge"
       """
       Incident # #{incident.incident_number} :
       #{incident.status} and assigned to #{getUserForIncident(incident)}
        #{incident.html_url}
-      To resolve: @#{robot.name} pager me resolve #{incident.incident_number}
       """
     else if hookType == "incident.resolve"
       """
@@ -455,23 +452,18 @@ module.exports = (robot) ->
       """
       #{incident.status} , unacknowledged and assigned to #{getUserForIncident(incident)}
        #{incident.html_url}
-      To acknowledge: @#{robot.name} pager me ack #{incident.incident_number}
-       To resolve: @#{robot.name} pager me resolve #{incident.incident_number}
       """
     else if hookType == "incident.assign"
       """
       Incident # #{incident.incident_number} :
       #{incident.status} , reassigned to #{getUserForIncident(incident)}
        #{incident.html_url}
-      To resolve: @#{robot.name} pager me resolve #{incident.incident_number}
       """
     else if hookType == "incident.escalate"
       """
       Incident # #{incident.incident_number} :
       #{incident.status} , was escalated and assigned to #{getUserForIncident(incident)}
        #{incident.html_url}
-      To acknowledge: @#{robot.name} pager me ack #{incident.incident_number}
-       To resolve: @#{robot.name} pager me resolve #{incident.incident_number}
       """
 
   parseIncidents = (messages) ->
